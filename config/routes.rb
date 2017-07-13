@@ -21,6 +21,9 @@
       post "/signup" => "auth#signup"
       post "/login" => "auth#login"
       post "/logout" => "auth#logout"
+
+      get "/me" => "users#show", :as => :user
+      patch "/me" => "users#update", :as => :update_user
     end
   end
 
